@@ -142,7 +142,7 @@ export default function UploadAudioView({ onNoteCreated, onOpenSettings }: Uploa
         requiresAccount = true;
       }
     } else {
-      // Cloud (OpenWhispr) — user is always signed in here
+      // Cloud (echo) — user is always signed in here
       fileTooLarge = file.sizeBytes > CLOUD_PRO_MAX_FILE_SIZE;
       requiresUpgrade = !isProUser && file.sizeBytes > CLOUD_FREE_MAX_FILE_SIZE;
       isLargeFile = file.sizeBytes > CLOUD_FREE_MAX_FILE_SIZE;
