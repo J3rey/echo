@@ -6,6 +6,8 @@ This document provides comprehensive technical details about the OpenWhispr proj
 
 OpenWhispr is an Electron-based desktop dictation application that uses whisper.cpp for speech-to-text transcription. It supports both local (privacy-focused) and cloud (OpenAI API) processing modes.
 
+> **Branding note:** The app's **user-facing display name is `echo`** (lowercase) — this is what appears in the UI, window titles, i18n string _values_, the default agent name, and the README. This was a **display-name-only** rebrand. All **internal identifiers remain `openwhispr` by design and must NOT be renamed**: bundle/app IDs (`com.gizmolabs.openwhispr`, `com.openwhispr.App`), storage & cache paths (`~/.cache/openwhispr`, `~/.openwhispr`), env vars (`OPENWHISPR_*`, `VITE_OPENWHISPR_*`), the `open-whispr` package name, the `openwhispr` inference-provider id, i18n _keys_, domains (`openwhispr.com` and `api.`/`auth.`/`docs.` subdomains), and the `OpenWhispr` electron-builder `productName`. Throughout the rest of this document, "OpenWhispr" refers to the project and its internal identifiers; the shipped product is presented to users as "echo".
+
 ## Architecture Overview
 
 ### Core Technologies
